@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact DMB</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+    rel="stylesheet">
+
+    <!-- Poppins Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Font awesone -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+</head>
+<style>
+    header #acontact {
+        color: #000;
+        font-weight: 600;
+        bottom: 0;
+    }
+
+    header #acontact:hover {
+        color: #fff;
+        background: #222
+    }
+</style>
+<body>
+    <!-- Contact -->
+    <header>
+        <a href="index.html" class="brand">DMB`</a>
+        <div class="menu">
+            <div class="btn">
+                <i class="fas fa-times close-btn"></i>
+            </div>
+            <a id="ahome" href="index.html">Home</a>
+            <a id="aabout" href="about.html">About</a>
+            <a id="awork" href="work.html">Work</a>
+            <a id="acontact" href="contact.html">Contact</a>
+        </div>
+        <div class="btn">
+            <i class="fas fa-bars menu-btn"></i>
+        </div>
+    </header>
+
+    <section class="contact" id="contact">
+        <div class="center">
+            <div class="h-main">
+                <div class="h-text">
+                    <h1>Contact</h1>
+                </div>
+                <p>Join me on this journey through my work history, where each chapter unfolds a unique story of challenges conquered, milestones achieved, and lessons learned. I would genuinely appreciate the opportunity to learn more about the details of your project
+                    and explore the ways in which I can contribute and provide assistance. If you could take a moment to kindly fill in the form with the pertinent information,
+                    it would allow me to gain a comprehensive understanding of your requirements. Rest assured that upon receiving your submission,
+                    I'm ready to discuss potential collaborations or any support you may need.
+                    Thank you in advance for considering this, and I look forward to the prospect of working together.</p>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <form action="https://formspree.io/f/mpzvwgpo" method="POST">
+                <input type="text" placeholder="Your name" required>
+                <input type="email" placeholder="Email address.." required>
+                <textarea name="" id="" cols="30" rows="10" placeholder="Write a message here.." required></textarea>
+                <input type="submit" name="" value="Send Message" class="send-btn">
+            </form>
+        </div>
+
+    </section>
+
+    <script type="text/javascript">
+
+        window.addEventListener("scroll", function() {
+            var header = document.querySelector("header");
+            header.classList.toggle('sticky', window.scrollY > 0);
+        });
+
+        var menu = document.querySelector('.menu');
+        var menubtn = document.querySelector('.menu-btn');
+        var closebtn = document.querySelector('.close-btn');
+
+        menubtn.addEventListener("click", () => {
+            menu.classList.add('active');
+        });
+
+        closebtn.addEventListener("click", () => {
+            menu.classList.remove('active');
+        });
+
+    </script>
+
+    <!-- Footer/End  -->
+    <footer>
+        <p>©︎ 2024 D. ALL RIGHT RESERVED</p>
+        <p>DEVELOPED BY DJANAIRAH BENITO</p>
+    </footer>
+
+</body>
+</html>

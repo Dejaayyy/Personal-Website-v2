@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DMB</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+    rel="stylesheet">
+
+    <!-- Poppins Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Font awesone -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<style type="text/css">
+
+    .parallax-1 {
+        display: flex;
+        background: url('media/bgdarken.png');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        justify-content: center;
+        background-blend-mode: darken;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .container {
+        display: flex;
+        background: #222;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .hero-text {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero-text h5 {
+        color: #111;  
+        font-size: 20px;
+    }
+
+    .hero-text h5 span {
+        color: #fff;
+        font-size: 22px;
+    }
+
+    .hero-text h1 {
+        color: #fff;
+        font-size: 3rem;
+    }
+
+    .hero-text h1 span {
+        color: #007ced;
+    }
+
+    .hero-text h4 {
+        color: #fff;
+        font-style: italic;
+        font-weight: bold;
+    }
+
+    .hero-text h4 span {
+        color: #111;
+    }
+
+    .hero-text p {
+        padding-top: 10px;
+        color: #fff;
+    }
+
+    .btn-group {
+        margin: 30px 0;
+    }
+
+    .btn-group .btn {
+        border-color: #d5d5d5;
+        color: #fff;
+        background-color: #333;
+        padding: 12px 25px;
+        margin: 5px 0;
+        margin-right: 7px;
+        border-radius: 30px;
+        border: 2px solid #e5e5e5;
+        box-shadow: 0 10px 10px -8px rgba(0 0 0 / 78%);
+    }
+
+    .btn.active {
+        border-color: #007ced;
+    }
+
+    .hero-text .social i {
+        color: #e5e5e5;
+        font-size: 18px;
+        margin-left: 10px;
+        transition: 0.5s
+    }
+
+    .hero-text .social i:hover {
+        color: #007ced;
+        transform: rotate(360deg);
+    }
+
+    .container .hero-pic {
+        width: auto;
+        max-width: 450px;
+        height: auto;
+        border-radius: 20%;
+        overflow: hidden;
+        border: 10px solid #007ced;
+        box-shadow: 5px 7px 25px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-pic img {
+        height: 100%;
+        width: 100%;
+        transition: 0.5s;
+    }
+
+    .hero-pic img:hover {
+        transform: scale(1.2);
+    }
+
+    header #ahome {
+        color: #000;
+        font-weight: 600;
+        bottom: 0;
+    }
+
+    header #ahome:hover {
+        color: #fff;
+        background: #222
+    }
+
+    .explore {
+        padding: 5%;
+        background: #222;
+        height: auto;
+    }
+
+    .explore-content h3 {
+        color: #fff;
+        cursor: default;
+
+    }
+
+    .explore-content a {
+        color: #007ced;
+        cursor: default;
+    }
+
+    .e-main {
+        display: block;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .e-text h1 {
+        font-size: 36px;
+        color: #007ced;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+    }
+
+    .e-main h3 {
+        color: #007ced;
+        padding: 0 10px;
+        text-align: justify;
+        margin-bottom: 0.5rem;
+    }
+
+    .e-main h3 span {
+        color: #fff;
+    }
+
+    .e-main p {
+        color: #fff;
+        text-align: justify;
+    }
+
+    .center p {
+        text-align: justify;
+        color: #fff;
+        font-size: 16px;
+        padding: 0 30px;
+        line-height: 24px;
+    }
+
+    .explore-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+        align-items: center;
+        text-align: center;
+        margin-top: 3rem;
+        margin-bottom: 4rem;
+    }
+
+    .box h3 {
+        font-size: 22px;
+        font-weight: 600;
+    }
+
+    .box a {
+        border-bottom: 2px solid #007ced;
+        color: #007ced;
+        font-size: 16px;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <!-- Home -->
+    <header>
+        <a href="index.html" class="brand">DMB`</a>
+        <div class="menu">
+            <div class="btn">
+                <i class="fas fa-times close-btn"></i>
+            </div>
+            <a id="ahome" href="index.html">Home</a>
+            <a id="aabout" href="about.html">About</a>
+            <a id="awork" href="work.html">Work</a>
+            <a id="acontact" href="registration.php">Contact</a>
+        </div>
+        <div class="btn">
+            <i class="fas fa-bars menu-btn"></i>
+        </div>
+    </header>
+
+    <section>
+        <section class="parallax-1">
+            <div class="hero-text">
+                <h5>Need a <span class="input"></span></h5>
+                <h1>Djanairah Benito</h1>
+                <h4>"<span>D</span>are <span>M</span>y <span>B</span>ent"</h4>
+                <p>Looking for someone who can live up your expectations?<br>
+                    Where capability knows no limits and every project is an opportunity to shine. <br>
+                    Let's embark on a limitless journey! <br> </p>
+                
+                <div class="btn-group">
+                    <a href="about.html" class="btn active">Learn more about me</a>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- Round Profile
+    <div class="container">
+        <div class="hero-pic">
+            <img src="media/dj.png" alt="profile pic">
+        </div>
+        <div class="hero-text">
+            <h5>Hi, I'm <span class="input"></span></h5>
+            <h1>Djanairah Benito</h1>
+            <p>From Caloocan City, NCR, Philippines! <br>
+                Currently 2nd year student who is taking a Degree of <br>
+                Bachelor of Science in Information Technology (BSIT) <br>
+                at National University - Fairview Campus.
+            </p>
+            
+            <div class="btn-group">
+                <a href="docs/Djanairah B - Resume.pdf" target="_blank" class="btn active">Download CV</a>
+            </div>
+            
+            Social Buttons
+            <div class="social">
+                <a href="https://www.facebook.com/Djanairah" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.linkedin.com/in/djanairahb/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.upwork.com/freelancers/~0170c23ebb6dc972c1" target="_blank"><i class="fa-brands fa-upwork"></i></a>
+                <a href="https://github.com/Dejaayyy" target="_blank"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div> 
+    </div> -->
+
+    <!-- Explore -->
+    <section class="explore" id="explore">
+        <div class="center">
+            <div class="e-main">
+                <div class="e-text">
+                    <h1>Greetings!</h1>
+                </div>
+                <p>Djanairah's here &hearts;<br><br>
+                    Passionate about technology and advertising and thriving on how some opportunities that will lead us, me and you to new possibilities in near future.
+                    With a background in these fields, I bring overall a 3 years of experience in these expertise such as supporting customers' inquiries, 
+                    short creative materials, and managing Facebook ads account for advertising. Seeking new challenges to improve and develop my to find new different abilities to expand my expertise.
+                </p>
+            </div>
+       
+            <div class="explore-content">
+                <div class="box">
+                    <h3>Learn more</h3>
+                    <a href="about.html"> &gt;&gt; About Me &lt;&lt;</a>
+                </div>
+            </div>
+        </div>
+    </section>            
+
+    <!-- JavaScript - Looped Typing -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+    <script>
+        var typed=new Typed(".input", {
+            strings:["Freelancer?", "Web Designer?", "Facebook ADS Manager?", "Video Editor?"], 
+            typedSpeed:65, 
+            backSpeed:65, 
+            loop:true
+        })
+    </script>
+
+    <script type="text/javascript">
+
+        window.addEventListener("scroll", function() {
+            var header = document.querySelector("header");
+            header.classList.toggle('sticky', window.scrollY > 0);
+        });
+
+        var menu = document.querySelector('.menu');
+        var menubtn = document.querySelector('.menu-btn');
+        var closebtn = document.querySelector('.close-btn');
+
+        menubtn.addEventListener("click", () => {
+            menu.classList.add('active');
+        });
+
+        closebtn.addEventListener("click", () => {
+            menu.classList.remove('active');
+        });
+
+    </script>
+
+    <!-- Footer/End  -->
+    <footer>
+        <p>©︎ 2024 D. ALL RIGHT RESERVED</p>
+        <p>DEVELOPED BY DJANAIRAH BENITO</p>
+    </footer>
+
+</body>
+</html>

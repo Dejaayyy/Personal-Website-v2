@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About DMB</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+    rel="stylesheet">
+
+    <!-- Poppins Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Font awesone -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<style>
+    header #aabout {
+        color: #000;
+        font-weight: 600;
+        bottom: 0;
+    }
+
+    header #aabout:hover {
+        color: #fff;
+        background: #222
+    }
+
+    .container {
+        display: flex;
+        background: #222;
+        justify-content: space-evenly;
+        align-items: center;
+        padding-top: 3rem;
+        padding-bottom: 2rem;
+        width: 100vw;
+        height: 90%;
+    }
+
+    .hero-text {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    h5 {
+        color: #111;  
+        font-size: 20px;
+    }
+
+    h5 span {
+        color: #fff;
+        font-size: 22px;
+    }
+
+    .hero-text h1 {
+        color: #fff;
+        font-size: 3rem;
+    }
+
+    .hero-text h1 span {
+        color: #007ced;
+    }
+
+    .hero-text h4 {
+        color: #fff;
+        font-style: italic;
+        font-weight: bold;
+    }
+
+    .hero-text h4 span {
+        color: #111;
+    }
+
+    .hero-text p {
+        padding: 0;
+        color: #fff;
+    }
+
+    .btn-group {
+        margin: 30px 0;
+    }
+
+    .btn-group .btn {
+        border-color: #d5d5d5;
+        color: #fff;
+        background-color: #333;
+        padding: 12px 25px;
+        margin: 5px 0;
+        margin-right: 7px;
+        border-radius: 30px;
+        border: 2px solid #e5e5e5;
+        box-shadow: 0 10px 10px -8px rgba(0 0 0 / 78%);
+    }
+
+    .btn.active {
+        border-color: #007ced;
+    }
+
+    .hero-text .social i {
+        color: #e5e5e5;
+        font-size: 18px;
+        margin-left: 10px;
+        transition: 0.5s
+    }
+
+    .hero-text .social i:hover {
+        color: #007ced;
+        transform: rotate(360deg);
+    }
+
+    .w-container {
+        width: 45vmin;
+        position: relative;
+        overflow: hidden;
+        border: 2px solid #007ced;
+        box-shadow: 0px 15px 30px 0px #007ced;
+        border-radius: 10%;
+    }
+
+    .hero-pic {
+        width: auto;
+        display: flex;
+        animation: slide 16s infinite;
+    }
+
+    .hero-pic img {
+        width: 100%; /* Set the width to 100% of the container */
+        height: auto; /* Maintain the aspect ratio */
+        object-fit: cover; /* Cover the entire container */
+    }
+
+    @keyframes slide {
+        0% {
+            transform: translateX(0);
+        }
+        25% {
+            transform: translateX(0);
+        }
+        30% {
+            transform: translateX(-100%);
+        }
+        50% {
+            transform: translateX(-100%);
+        }
+        55% {
+            transform: translateX(-200%);
+        }
+        75% {
+            transform: translateX(-200%);
+        }
+        80% {
+            transform: translateX(-300%);
+        }
+        100% {
+            transform: translateX(-300%);
+        }
+    }
+
+    .hero-pic img {
+        height: 100%;
+        width: 100%;
+        transition: 0.5s;
+    }
+
+    .hero-pic img:hover {
+        transform: scale(1.2);
+    }
+
+    .hero-text .social i {
+        margin-left: 0;
+        width: 40px;
+        height: 40px;
+        font-size: 25px;
+        background: transparent;
+    }
+
+    .social h5 {
+        color: #fff;
+        padding-bottom: 0.3rem;
+        font-weight: 600;
+    }
+    
+    .social span {
+        color: #007ced;
+    }
+
+    .hero-text i {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 35px;
+        height: 35px;
+        font-size: 35px;
+        background:transparent;
+        color: #007ced;
+    }
+
+    .hero-text p {
+        display: flex;
+        align-items: center;
+    }
+
+    .hero-text a {
+        margin-top: 5px;
+        text-align: left;
+        font-size: small;
+        font-style: italic;
+        color: #fff;
+    }
+
+    .profile-container {
+        padding: 20px;
+        background:#333;
+        border-radius: 12px;
+        margin-bottom: 1rem;
+    }
+
+    .hero-text .row {
+        background: #333;
+        border-radius: 12px;
+        border: 1px solid transparent;
+        transition: all .7s;
+        text-align: left;
+    }
+
+    .hero-text .main-row {
+        display: inline-flex;
+        align-items: center;
+        text-align: left;
+    }
+
+    .main-row .row-text {
+        padding-left: 10px;
+    }
+
+    .row-text h5 {
+        font-size: large;
+        font-weight: 400;
+    }
+
+    .about .h-main {
+        background: transparent;
+    }
+
+    .educ-box a {
+        color: #000;
+    }
+
+    .explore {
+        padding: 5%;
+        background: #222;
+        height: auto;
+    }
+
+    .explore-content h3 {
+        color: #fff;
+        cursor: default;
+
+    }
+
+    .explore-content a {
+        color: #007ced;
+        cursor: default;
+    }
+
+    .e-main {
+        display: block;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .e-text h1 {
+        font-size: 36px;
+        color: #007ced;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+    }
+
+    .e-main h3 {
+        color: #007ced;
+        padding: 0 10px;
+        text-align: justify;
+        margin-bottom: 0.5rem;
+    }
+
+    .e-main h3 span {
+        color: #fff;
+    }
+
+    .e-main p {
+        color: #fff;
+        text-align: justify;
+    }
+
+    .center p {
+        text-align: justify;
+        color: #fff;
+        font-size: 16px;
+        /* padding: 0 30px; */
+        line-height: 24px;
+    }
+
+    .explore-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+        align-items: center;
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    .box h3 {
+        font-size: 22px;
+        font-weight: 600;
+    }
+
+    .box a {
+        border-bottom: 2px solid #007ced;
+        color: #007ced;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+</style>
+<body>
+    <!-- About -->
+    <header>
+        <a href="index.html" class="brand">DMB`</a>
+        <div class="menu">
+            <div class="btn">
+                <i class="fas fa-times close-btn"></i>
+            </div>
+            <a id="ahome" href="index.html">Home</a>
+            <a id="aabout" href="about.html">About</a>
+            <a id="awork" href="work.html">Work</a>
+            <a id="acontact" href="registration.php">Contact</a>
+        </div>
+
+        <div class="btn">
+            <i class="fas fa-bars menu-btn"></i>
+        </div>
+    </header>
+
+    <section class="about" id="about">
+        <div class="center">
+            <div class="h-main">
+                <div class="h-text">
+                    <h1>About me</h1>
+                    <h3><span>B</span>ackground</h3>
+                    <p>When she was young, her dream was to be an Architect, but somehow she lost her passion to it. 
+                        After then, she started to be interested in gadgets and computers, and that's why she pursue in technology and advertising 
+                        to thrive on new opportunities that will lead her new possibilities in near future.
+                    </p>
+                </div>
+
+                <div class="container">
+                    <div class="w-container">
+                        <div class="hero-pic">
+                            <img src="media/dj1.png">
+                            <img src="media/dj2.png">
+                            <img src="media/dj3.png">
+                            <img src="media/dj4.png">
+                        </div>
+                    </div>
+                    
+
+                    <div class="hero-text">
+                        <div class="profile-container">
+                            <div class="main-row">
+                                <div class="row-icon">
+                                    <a><i class="ri-profile-fill"></i></a>
+                                </div>
+                                <div class="row-text">
+                                    <h5>Djanairah Mackay Benito</h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="profile-container">
+                            <div class="main-row">
+                                <div class="row-icon">
+                                    <a><i class="ri-cake-fill"></i></a>
+                                </div>
+                                <div class="row-text">
+                                    <h5>Born on 2002</h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="profile-container">
+                            <div class="main-row">
+                                <div class="row-icon">
+                                    <a><i class="ri-map-pin-2-fill"></i></a>
+                                </div>
+                                <div class="row-text">
+                                    <h5>Caloocan City, NCR, PH</h5>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="social">
+                            <h5><span>F</span>ollow <span>M</span>e!</h5>
+                            <a href="https://www.facebook.com/Djanairah" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="https://www.linkedin.com/in/djanairahb/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://www.upwork.com/freelancers/~0170c23ebb6dc972c1" target="_blank"><i class="fa-brands fa-upwork"></i></a>
+                            <a href="https://github.com/Dejaayyy" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="educ-main">
+                <h3><span>E</span>ducation</h3>
+                <p>During her junior high school she was still in Caloocan until her family migrated in Angeles, Pampanga for about two (2) years and finish senior high school.
+                    Following the epidemic, her family relocated back to Caloocan, 
+                    and attend to PUP-QC Campus, where she completed a semester of BTLED-ICT coursework. 
+                    Unfortunately, she opted to continue and change her course to BSIT-MI.</p>
+            </div>
+
+            <div class="educ-container">
+                <main class="educ-row">
+                    <section class="col">
+
+                        <div class="contents">
+                            <div class="educ-box">
+                                <h4>2021 - Present</h4>
+                                <h3><a href="https://national-u.edu.ph/nu-fairview/" target="_blank">National University - Fairview Campus</a></h3>
+                                <a href="https://national-u.edu.ph/nu-fairview/" target="_blank">Bachelor of Science in Information Technology with Specialization of Mobile and Internet Technologies <br>BSIT-MI</a>
+                            </div>
+            
+                            <div class="educ-box">
+                                <h4>2021</h4>
+                                <h3><a href="https://www.pup.edu.ph/quezoncity/" target="_blank">Polytechnic University of the Philippines - QC Campus</a></h3>
+                                <a href="https://www.pup.edu.ph/quezoncity/" target="_blank">Bachelor of Technology and Livelihood Education - ICT <br> BTLED-ICT</a>
+                            </div>
+
+                            <div class="educ-box">
+                                <h4>2019 - 2021</h4>
+                                <h3><a href="https://www.hau.edu.ph" target="_blank">Holy Angel University - Angeles, Pampanga</a></h3>
+                                <a href="https://www.hau.edu.ph" target="_blank">Senior High School <br>Science, Technology, Engineering, and Mathematics <br>STEM Strand</a>
+                            </div>
+
+                            <div class="educ-box">
+                                <h4>2016 - 2019</h4>
+                                <h3><a href="https://www.himc.ph/index.htm" target="_blank">Holy Infant Montessori Center - Deparo, Caloocan</a></h3>
+                                <a href="https://www.himc.ph/index.htm" target="_blank">Junior High School</a>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+            </div>
+
+            <div class="h-main">
+                <div class="h-text">
+                    <h3><span>H</span>obbies</h3>
+                </div>
+                <p>She's a multifaceted enthusiast with a passion for creativity and entertainment. From bringing characters to life on paper to immersing myself in virtual worlds, 
+                    dancing to the rhythm of life, and indulging in captivating stories through movies, series, and manga as
+                    she thrive on the vibrant energy of my hobbies. Join her as I explore the endless possibilities of expression and adventure!
+                </p>
+
+                <div class="container">
+                    <div class="hero-text">
+                        <div class="profile-container">
+                            <div class="main-row">
+                                <div class="row-icon">
+                                    <a><i class="ri-motorbike-fill"></i></a>
+                                </div>
+                                <div class="row-text">
+                                    <h5>Loves to drive</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="profile-container">
+                            <div class="main-row">
+                                <div class="row-icon">
+                                    <a><i class="ri-restaurant-fill"></i></a>
+                                </div>
+                                <div class="row-text">
+                                    <h5>Loves to eat</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="profile-container">
+                            <div class="main-row">
+                                <div class="row-icon">
+                                    <a><i class="ri-camera-2-fill"></i></a>
+                                </div>
+                                <div class="row-text">
+                                    <h5>Loves to snap</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="profile-container">
+                            <div class="main-row">
+                                <div class="row-icon">
+                                    <a><i class="ri-heart-fill"></i></a>
+                                </div>
+                                <div class="row-text">
+                                    <h5>KPOP Fan</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-container">
+                        <div class="hero-pic">
+                            <img src="media/motor.png">
+                            <img src="media/food.png">
+                            <img src="media/bed.png">
+                            <img src="media/kpop.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="w-container">
+                        <div class="hero-pic">
+                            <img src="media/tree.png">
+                            <img src="media/mosque.png">
+                            <img src="media/singapore.png">
+                            <img src="media/flower.png">
+                        </div>
+                    </div>
+                    <div class="hero-text">
+                        <p>Take your time to explore my snaps <br>
+                            from this little gallery &hearts;</p>
+                        <a>*Hover on the image for HD preview</a>
+                    </div> 
+                </div>
+
+            </div>
+
+        </div>
+
+            <div class="center">
+                <div class="e-main">
+                    <div class="e-text">
+                        <h1>Her experience?</h1>
+                    </div>
+                    <p>Djanairah's here &hearts;<br><br>
+                        With a robust background in freelancing, I bring a wealth of experience and expertise to the table. 
+                        Over the years, I've had the privilege of working in various roles, honing my skills,
+                        and fostering a deep understanding of how social media works.
+                    </p>
+                </div>
+           
+                <div class="explore-content">
+                    <div class="box">
+                        <h3>Explore her works</h3>
+                        <a href="work.html"> &gt;&gt; Her works &lt;&lt;</a>
+                    </div>
+                </div>
+            </div>
+
+    </section>
+
+    <script type="text/javascript">
+
+        window.addEventListener("scroll", function() {
+            var header = document.querySelector("header");
+            header.classList.toggle('sticky', window.scrollY > 0);
+        });
+
+        var menu = document.querySelector('.menu');
+        var menubtn = document.querySelector('.menu-btn');
+        var closebtn = document.querySelector('.close-btn');
+
+        menubtn.addEventListener("click", () => {
+            menu.classList.add('active');
+        });
+
+        closebtn.addEventListener("click", () => {
+            menu.classList.remove('active');
+        });
+
+    </script>
+
+    <!-- Footer/End  -->
+    <footer>
+        <p>©︎ 2024 D. ALL RIGHT RESERVED</p>
+        <p>DEVELOPED BY DJANAIRAH BENITO</p>
+    </footer>
+
+</body>
+</html>
