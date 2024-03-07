@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DMB Works</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+    rel="stylesheet">
+
+    <!-- Poppins Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Font awesone -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<style>
+    header #awork {
+        color: #000;
+        font-weight: 600;
+        bottom: 0;
+    }
+
+    header #awork:hover {
+        color: #fff;
+        background: #222
+    }
+
+    .container {
+        display: flex;
+        background: #222;
+        justify-content: space-around;
+        align-items: center;
+        width: 100vw;
+        height: 90%;
+    }
+
+    .work-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+        align-items: center;
+        text-align: center;
+        gap: 2.5rem;
+        margin-top: 3rem;
+    }
+
+    .work-content h3 {
+        color: #fff;
+        cursor: default;
+    }
+
+    .work-content a {
+        color: #007ced;
+        cursor: pointer;
+    }
+
+    .row-text {
+        text-align: left;
+        cursor: pointer;
+    }   
+
+    .exp-content {
+        display: grid;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        gap: 2.5rem;
+        margin-bottom: 5.5rem;
+    }
+
+    .exp-content .box h3 {
+        color: #fff;
+        cursor: default;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        font-weight: 600;
+        margin: 0;
+    }
+
+    .exp-content .box a {
+        color: #007ced;
+        cursor: default;
+        border-bottom: 2px solid #007ced;
+        color: #007ced;
+        font-size: 16px;
+    }
+
+    .box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .h-main {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .w-container {
+        width: 35vmin;
+        position: relative;
+        overflow: hidden;
+        border: 2px solid #007ced;
+        box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.5);
+        /* box-shadow: 5px 7px 25px rgba(0, 0, 0, 0.5); */
+        border-radius: 10%;
+    }
+
+    .hero-pic {
+        width: auto;
+        display: flex;
+        animation: slide 16s infinite;
+    }
+
+    .hero-pic img {
+        width: 100%; /* Set the width to 100% of the container */
+        height: auto; /* Maintain the aspect ratio */
+        object-fit: cover; /* Cover the entire container */
+        transition: all 0.5s;
+        background: #dddddd;
+    }
+    .hero-pic img:hover {
+        transition: all 0.5s;
+        transform: scale(1.2);
+    }
+
+    .pic-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .btn-group {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 30px 0;
+    }
+
+    .btn-group .btn {
+        border-color: #d5d5d5;
+        color: #fff;
+        background-color: #333;
+        padding: 12px 25px;
+        margin: 5px 0;
+        margin-right: 7px;
+        border-radius: 30px;
+        border: 2px solid #007ced;
+        box-shadow: 0 10px 10px -8px #007ced;
+    }
+
+    .explore {
+        padding: 5%;
+        background: #222;
+        height: auto;
+    }
+
+    .explore-content h3 {
+        color: #fff;
+        cursor: default;
+
+    }
+
+    .explore-content a {
+        color: #007ced;
+        cursor: default;
+    }
+
+    .e-main {
+        display: block;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .e-text h1 {
+        font-size: 36px;
+        color: #007ced;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+    }
+
+    .e-main h3 {
+        color: #007ced;
+        padding: 0 10px;
+        text-align: justify;
+        margin-bottom: 0.5rem;
+    }
+
+    .e-main h3 span {
+        color: #fff;
+    }
+
+    .e-main p {
+        color: #fff;
+        text-align: justify;
+    }
+
+    .center p {
+        text-align: justify;
+        color: #fff;
+        font-size: 16px;
+        padding: 0 30px;
+        line-height: 24px;
+    }
+
+    .explore-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+        align-items: center;
+        text-align: center;
+        margin-top: 3rem;
+        margin-bottom: 4rem;
+    }
+
+    .box h3 {
+        font-size: 22px;
+        font-weight: 600;
+    }
+
+    .box a {
+        border-bottom: 2px solid #007ced;
+        color: #007ced;
+        font-size: 16px;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <!-- Work -->
+    <header>
+        <a href="index.html" class="brand">DMB`</a>
+        <div class="menu">
+            <div class="btn">
+                <i class="fas fa-times close-btn"></i>
+            </div>
+            <a id="ahome" href="index.html">Home</a>
+            <a id="aabout" href="about.html">About</a>
+            <a id="awork" href="work.html">Work</a>
+            <a id="acontact" href="registration.php">Contact</a>
+        </div>
+        <div class="btn">
+            <i class="fas fa-bars menu-btn"></i>
+        </div>
+    </header>
+
+    <section class="work" id="work">
+        <div class="center">
+            <div class="h-main">
+                <div class="h-text">
+                    <h1>Work</h1>
+                    <p>Over the years, I have had the privilege of contributing my skills and expertise to various dynamic roles, 
+                        each adding a layer to my professional narrative. In my current capacity as a Freelancer, I provide these such roles to encapsulates my dedication for being a freelancer, 
+                        and I am proud to have played an integral part in these projects. As you explore my professional portfolio, you will find a harmonious blend of creativity, strategic thinking, 
+                        and a results-oriented approach.</p><br>
+                </div>
+
+                <div class="container">
+                    <div class="exp-content">
+                        <div class="box">
+                            <h3>Virtual Assistant</h3>
+                            <a>3 Years Experience</a>
+                        </div>
+
+                        <div class="box">
+                            <h3>Video Editor</h3>
+                            <a>1.5 Years Experience</a>
+                        </div>
+
+                        <div class="box">
+                            <h3>Facebook ADS Specialist</h3>
+                            <a>1 Year Experience</a>
+                        </div>
+                    </div>
+
+                    <div class="pic-container">
+                        <div class="w-container">
+                            <div class="hero-pic">
+                                <img src="media/djprof.png">
+                            </div>
+                        </div>
+
+                        <div class="btn-group">
+                            <a href="docs/Djanairah B - Resume.pdf" target="_blank" class="btn active">Download CV</a>
+                        </div>
+                    </div>
+                    
+                    <div class="exp-content">
+                        <div class="box">
+                            <h3>Android Developer</h3>
+                            <a href="">336+ Hours Experience</a>
+                        </div>
+
+                        <div class="box">
+                            <h3>UI/UX Designer</h3>
+                            <a href="">78+ Hours Experience</a>
+                        </div>
+
+                        <div class="box">
+                            <h3>Frontend Developer</h3>
+                            <a href="">30+ Hours Experience</a>
+                        </div>   
+                    </div>
+                </div>
+            </div>
+
+            <p>In this field, my skills in academic projects and collaborative assignments that were refined that I mostly excel are those of the following:</p>
+            <div class="work-content">
+                <div class="row">
+                    <a href="https://drive.google.com/file/d/1o1yByYDykbfl79YlfUufYH8fm9jo0lbq/view?usp=drive_link" target="_blank"><img src="media/memorushapp.png"></a>
+                    <div class="main-row">
+                        <div class="row-text">
+                            <a href="https://drive.google.com/file/d/1o1yByYDykbfl79YlfUufYH8fm9jo0lbq/view?usp=drive_link" target="_blank"><h5>MemoRush App APK</h5></a>
+                            <a href="https://drive.google.com/file/d/1o1yByYDykbfl79YlfUufYH8fm9jo0lbq/view?usp=drive_link" target="_blank"><h4>Android Development</h4></a>
+                        </div>
+                        <div class="row-icon">
+                            <a href="https://drive.google.com/file/d/1o1yByYDykbfl79YlfUufYH8fm9jo0lbq/view?usp=drive_link" target="_blank"><i class="ri-android-fill"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <a href="docs/Facebook ADS.pdf" target="_blank"><img src="media/fbads.png"></a>
+                    <div class="main-row">
+                        <div class="row-text">
+                            <a href="Facebook ADS.pdf" target="_blank"><h5>Facebook ADS Campaign</h5></a>
+                            <a href="Facebook ADS.pdf" target="_blank"><h4>Facebook ADS Manager</h4></a>
+                        </div>
+                        <div class="row-icon">
+                            <a href="Facebook ADS.pdf" target="_blank"><i class="ri-facebook-box-fill"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <a href="docs/GADGET GALAXY - PROTOTYPE.pdf" target="_blank"><img src="media/ui.png"></a>
+                    <div class="main-row">
+                        <div class="row-text">
+                            <a href="GADGET GALAXY - PROTOTYPE.pdf" target="_blank"><h5>Gadget Galaxy Prototype</h5></a>
+                            <a href="GADGET GALAXY - PROTOTYPE.pdf" target="_blank"><h4 >UI Development</h4></a>
+                        </div>
+                        <div class="row-icon">
+                            <a href="GADGET GALAXY - PROTOTYPE.pdf" target="_blank"><i class="ri-layout-5-fill"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <a href="https://youtu.be/DuVyc0Hkvl4" target="_blank"><img src="media/gadgetgalaxy.png"></a>
+                    <div class="main-row">
+                        <div class="row-text">
+                            <a href="https://youtu.be/DuVyc0Hkvl4" target="_blank"><h5>Gadget Galaxy Web Demo</h5></a>
+                            <a href="https://youtu.be/DuVyc0Hkvl4" target="_blank"><h4>Video Editing</h4></a>
+                        </div>
+                        <div class="row-icon">
+                            <a href="https://youtu.be/DuVyc0Hkvl4" target="_blank"><i class="ri-youtube-fill"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <a href="https://youtu.be/1fiRkqSNnHw" target="_blank"><img src="media/canva.png"></a>
+                    <div class="main-row">
+                        <div class="row-text">
+                            <a href="https://youtu.be/1fiRkqSNnHw" target="_blank"><h5>Creative Video Material</h5></a>
+                            <a href="https://youtu.be/1fiRkqSNnHw" target="_blank"><h4>Video Editing</h4></a>
+                        </div>
+                        <div class="row-icon">
+                            <a href="https://youtu.be/1fiRkqSNnHw" target="_blank"><i class="ri-youtube-fill"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <a href="https://youtu.be/E55EXaJG3s4" target="_blank"><img src="media/memorush.png"></a>
+                    <div class="main-row">
+                        <div class="row-text">
+                            <a href="https://youtu.be/E55EXaJG3s4" target="_blank"><h5>MemoRush App Demo</h5></a>
+                            <a href="https://youtu.be/E55EXaJG3s4" target="_blank"><h4>Video Editing</h4></a>
+                        </div>
+                        <div class="row-icon">
+                            <a href="https://youtu.be/E55EXaJG3s4" target="_blank"><i class="ri-youtube-fill"></i></a>
+                            <a href="https://github.com/Dejaayyy/MemoRush" target="_blank"><i class="ri-github-fill"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <a href="https://github.com/Dejaayyy/bbdms" target="_blank"><img src="media/bloodbank.png"></a>
+                    <div class="main-row">
+                        <div class="row-text">
+                            <a href="https://github.com/Dejaayyy/bbdms" target="_blank"><h5>Blood Bank Donation</h5></a>
+                            <a href="https://github.com/Dejaayyy/bbdms" target="_blank"><h4>Front End Development</h4></a>
+                        </div>
+                        <div class="row-icon">
+                            <a href="https://github.com/Dejaayyy/bbdms" target="_blank"><i class="ri-github-fill"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <a href="https://github.com/Dejaayyy/Hearth-of-Fortune" target="_blank"><img src="media/hof.png"></a>
+                    <div class="main-row">
+                        <div class="row-text">
+                            <a href="https://github.com/Dejaayyy/Hearth-of-Fortune" target="_blank"><h5>Hearth of Fortune</h5></a>
+                            <a href="https://github.com/Dejaayyy/Hearth-of-Fortune" target="_blank"><h4>Front End Development</h4></a>
+                        </div>
+                        <div class="row-icon">
+                            <a href="https://github.com/Dejaayyy/Hearth-of-Fortune" target="_blank"><i class="ri-github-fill"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="explore" id="explore">
+        <div class="center">
+            <div class="e-main">
+                <div class="e-text">
+                    <h1>Collab now?</h1>
+                </div>
+                <p>Djanairah's here &hearts;<br><br>
+                    Looking forward to the possibility of connecting and gaining valuable insights.
+                    Your interest in my work means a great deal to me, and I'm truly honored to have captured your attention. 
+                    Creating and sharing my projects is a passion of mine, and knowing that others find value in them brings me immense joy. 
+                    Your visit not only encourages me to continue pursuing my creative endeavors but also motivates me to strive for excellence in everything I do.
+                </p>
+            </div>
+       
+            <div class="explore-content">
+                <div class="box">
+                    <h3>Be in touch with me</h3>
+                    <a href="registration.php"> &gt;&gt; Contact Me &lt;&lt;</a>
+                </div>
+            </div>
+        </div>
+    </section>  
+
+    <script type="text/javascript">
+
+        window.addEventListener("scroll", function() {
+            var header = document.querySelector("header");
+            header.classList.toggle('sticky', window.scrollY > 0);
+        });
+
+        var menu = document.querySelector('.menu');
+        var menubtn = document.querySelector('.menu-btn');
+        var closebtn = document.querySelector('.close-btn');
+
+        menubtn.addEventListener("click", () => {
+            menu.classList.add('active');
+        });
+
+        closebtn.addEventListener("click", () => {
+            menu.classList.remove('active');
+        });
+
+    </script>
+
+    <!-- Footer/End  -->
+    <footer>
+        <p>©︎ 2024 D. ALL RIGHT RESERVED</p>
+        <p>DEVELOPED BY DJANAIRAH BENITO</p>
+    </footer>
+
+</body>
+</html>
